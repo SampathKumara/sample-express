@@ -5,11 +5,12 @@ const router = express.Router();
 /* GET programming languages. */
 router.get('/', async function (req: Request, res: Response, next) {
     try {
-        // res.json(await programmingLanguages.getMultiple(req.query.page));
+        // res.json(programmingLanguages.getMultiple());
+        res.json({ "test": 1 });
     } catch (err) {
         console.error(`Error while getting programming languages `, err);
         next(err);
     }
 });
 
-module.exports = router;
+export { router }
